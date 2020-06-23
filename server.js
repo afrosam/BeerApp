@@ -9,11 +9,11 @@ if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 } else {
     app.use(express.static('client/build'));
-
-    app.get('/*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-    })
 }
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+});
 
 const apiEndpoint = 'http://sandbox-api.brewerydb.com/v2';
 
@@ -22,7 +22,7 @@ app.get('/beers/:beer', (req, res) => {
     const beerName = `${req.params.beer}`;
     // make request to https://sandbox-api.brewerydb.com/v2/key={process.env.BREW_KEY}
     axios.get(`${apiEndpoint}/search?key=${process.env.BREW_KEY}&type=beer&q=${beerName}`)
-        // .data for axios payload    
+        // .data for axios payload
         .then((res) => res.data)
         .catch((err) => res.status(500).send(err.stack))
         // .data for data from payload
