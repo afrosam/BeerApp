@@ -2,6 +2,9 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 
+const app = express();
+const port = 3010;
+
 if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 } else {
@@ -11,9 +14,6 @@ if (process.env.NODE_ENV !== 'production'){
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
     })
 }
-
-const app = express();
-const port = 3010;
 
 const apiEndpoint = 'http://sandbox-api.brewerydb.com/v2';
 
