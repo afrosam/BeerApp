@@ -5,15 +5,15 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5010;
 
-app.use(express.static('/client'));
+app.use('/', express.static(path.join(__dirname, '/client/build')));
 
 if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 }
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     // res.send('hello heroku!');
-    const index = path.join(__dirname, 'client', 'build', 'index.html');
+    const index = path.join(__dirname, '/client/build', 'index.html');
     res.sendFile(index);
 });
 
