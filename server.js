@@ -12,9 +12,9 @@ if (process.env.NODE_ENV !== 'production'){
 }
 
 app.get('/', (req, res) => {
-    res.send('hello heroku!');
-    // const index = path.join(__dirname, 'client', 'build', 'index.html');
-    // res.sendFile(index);
+    // res.send('hello heroku!');
+    const index = path.join(__dirname, 'client', 'build', 'index.html');
+    res.sendFile(index);
 });
 
 const apiEndpoint = 'http://sandbox-api.brewerydb.com/v2';
