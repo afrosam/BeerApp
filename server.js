@@ -9,10 +9,11 @@ if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 }
 
-app.use(express.static('./client/build'));
+app.use(express.static('client'));
 
 app.get('/*', (req, res) => {
-    res.sendFile(path.resolve('./client/build/index.html'))
+    const index = path.join(__dirname, 'build', 'index.html');
+    res.sendFile(index);
 });
 
 const apiEndpoint = 'http://sandbox-api.brewerydb.com/v2';
