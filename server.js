@@ -26,10 +26,10 @@ app.get('/beers/:beer', (req, res) => {
     axios.get(`${apiEndpoint}/search?key=${process.env.BREW_KEY}&type=beer&q=${beerName}`)
         // .data for axios payload
         .then((res) => res.data)
-        .catch((err) => res.status(500).send(err.stack))
+        .catch((err) => console.error(err))
         // .data for data from payload
         .then((data) => data.data)
-        .catch((err) => res.status(500).send(err.stack))
+        .catch((err) => console.error(err))
         .then(data => res.send(data));
 });
 
