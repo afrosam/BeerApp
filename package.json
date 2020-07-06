@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a MERN app for beer",
   "main": "server.js",
+  "homepage": "https://stark-badlands-62892.herokuapp.com",
   "scripts": {
     "client-install": "npm install --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
