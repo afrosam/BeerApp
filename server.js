@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 5010;
@@ -19,17 +20,16 @@ app.get('*', (req, res) => {
     res.sendFile(index);
 });
 
-app.get('/beers/:beer', (req, res) => {
-    // change for beer api
+app.get('/beers/:beer', cors(), (req, res) => {
     const beerName = `${req.params.beer}`;
     // make request to https://sandbox-api.brewerydb.com/v2/key={process.env.BREW_KEY}
     axios.get(`${apiEndpoint}/search?key=${process.env.BREW_KEY}&type=beer&q=${beerName}`)
         // // .data for axios payload
-        // .then(res => res.data)
-        // .catch((err) => console.error(err))
-        // // .data for data from payload
-        // .then(data => data.data)
-        // .catch((err) => console.error(err))
+        .then(res => res.data)
+        .catch((err) => console.error(err))
+        // .data for data from payload
+        .then(data => data.data)
+        .catch((err) => console.error(err))
         .then(res => res.send(res));
 });
 
