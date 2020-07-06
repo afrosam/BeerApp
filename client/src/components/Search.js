@@ -10,6 +10,7 @@ export const Search = () => {
         e.preventDefault();
         const data = new FormData(e.target);
         const beerName = data.get('name').trim();
+        console.log(beerName);
 
         if (beerName) {
             axios.get(`/beers/${beerName}`)
