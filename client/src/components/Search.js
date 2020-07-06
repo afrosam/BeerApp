@@ -12,7 +12,7 @@ export const Search = () => {
         const beerName = data.get('name').trim();
 
         if (beerName) {
-            axios.get(`/beers/${beerName}`)
+            axios.get(`https://stark-badlands-62892.herokuapp.com/beers/${beerName}`)
             .then(res => console.log(res))
             .then(res => res.data)
             .catch(err => console.error(err))
