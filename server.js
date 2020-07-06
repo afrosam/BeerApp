@@ -29,7 +29,8 @@ app.get('/beers/:beer', (req, res) => {
 
 app.get('*', (req, res) => {
     // res.send('hello heroku!');
-    res.sendFile('index.html');
+    const index = path.join(__dirname, 'client/build', 'index.html');
+    res.sendFile(index);
 });
 
 app.listen(port, () => {
