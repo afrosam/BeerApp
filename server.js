@@ -6,6 +6,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5010;
 
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 if (process.env.NODE_ENV !== 'production'){
@@ -20,8 +21,9 @@ app.get('*', (req, res) => {
     res.sendFile(index);
 });
 
-app.get('/beers/:beer', cors(), (req, res) => {
+app.get('/beers/:beer', (req, res) => {
     const beerName = `${req.params.beer}`;
+    let list;
     // make request to https://sandbox-api.brewerydb.com/v2/key={process.env.BREW_KEY}
     axios.get(`${apiEndpoint}/search?key=${process.env.BREW_KEY}&type=beer&q=${beerName}`)
         // // .data for axios payload
@@ -30,7 +32,9 @@ app.get('/beers/:beer', cors(), (req, res) => {
         // .data for data from payload
         .then(data => data.data)
         .catch((err) => console.error(err))
-        .then(res => res.send(res));
+        .then(res => list = res);
+    
+    res.send(list);
 });
 
 app.listen(port, () => {
