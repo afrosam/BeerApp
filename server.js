@@ -26,7 +26,7 @@ app.get('/beers/:beer', (req, res) => {
     // make request to https://sandbox-api.brewerydb.com/v2/key={process.env.BREW_KEY}
     axios.get(`${apiEndpoint}/search?key=${process.env.BREW_KEY}&type=beer&q=${beerName}`)
         // // .data for axios payload
-        .then(res => res.data)
+        .then(res => res)
         .catch((err) => console.error(err))
         // // .data for data from payload
         // .then(data => data.data)
