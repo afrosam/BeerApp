@@ -13,9 +13,8 @@ export const Search = () => {
 
         if (beerName) {
             axios.get(`/beers/${beerName}`)
-            .then(res => console.log(res))
             .then(res => res.data)
-            .catch(err => console.error(err))
+            .catch(err => window.alert(err))
             .then(data => {
                 getBeers(data)
             });

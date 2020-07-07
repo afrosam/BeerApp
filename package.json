@@ -1,7 +1,6 @@
 {
   "name": "beerapp",
   "version": "1.0.0",
-  "homepage": "/",
   "description": "a MERN app for beer",
   "main": "server.js",
   "scripts": {
