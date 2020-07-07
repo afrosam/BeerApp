@@ -24,14 +24,16 @@ app.get('*', (req, res) => {
 app.get('/beers/:beer', (req, res) => {
     const beerName = `${req.params.beer}`;
     // make request to https://sandbox-api.brewerydb.com/v2/key={process.env.BREW_KEY}
-    axios.get(`${apiEndpoint}/search?key=${process.env.BREW_KEY}&type=beer&q=${beerName}`)
+    let list = axios.get(`${apiEndpoint}/search?key=${process.env.BREW_KEY}&type=beer&q=${beerName}`)
         // // .data for axios payload
         .then(res => res)
         .catch((err) => console.error(err))
         // // .data for data from payload
         // .then(data => data.data)
         // .catch((err) => console.error(err))
-        .then(data => res.send(data));
+        .then(data => data);
+    
+    res.send(list);
 });
 
 app.listen(port, () => {
