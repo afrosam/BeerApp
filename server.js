@@ -23,8 +23,8 @@ app.get('/beers/:beer', (req, res) => {
         .then(res => res.data)
         .catch((err) => window.alert(err))
         // // .data for data from payload
-        // .then(data => data.data)
-        // .catch((err) => console.error(err))
+        .then(data => data.data)
+        .catch((err) => window.alert(err))
         .then(data => res.send(data));
 });
 
