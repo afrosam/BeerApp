@@ -4,8 +4,8 @@ export const Beer = (props) => {
     const {abv, name, description, servingTemperature, available, style, labels} = props.beer;
 
     return (
-        <div className="flex items-stretch transition shadow duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-            <div className="flex-1 text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg">
+        <div className="transition shadow duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+            <div className="text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg">
                 { labels ? <img src={labels.medium} alt={`${name} icon`} className="w-8/12 sm:w-6/12 mx-auto px-2 py-2"  /> : null}
                 <div className="px-6 py-4">
                     <div className="mb-2">

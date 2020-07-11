@@ -16,8 +16,6 @@ export const GlobalProvider = ({ children }) => {
 
     // actions, (signal reducer to update state)
     function getBeers(beerlist) {
-        console.log(beerlist);
-        console.log(typeof beerlist);
         dispatch({
             type: 'BEER_LIST',
             payload: beerlist

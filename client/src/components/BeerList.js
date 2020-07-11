@@ -4,7 +4,7 @@ import {Beer} from './Beer';
 
 export const BeerList = () => {
     const {beerResults, isEmpty} = useContext(GlobalContext);
-    console.log(beerResults);
+    
     const showResults = (list) => {
         return !list ? <p className="text-center text-md sm:text-xl text-red-600">Sorry, no results found.</p>
         : (
