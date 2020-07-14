@@ -5,16 +5,15 @@ export const Beer = (props) => {
 
     return (
         <div className="transition shadow duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-            <div className="text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg">
-                { labels ? <img src={labels.medium} alt={`${name} icon`} className="w-8/12 sm:w-6/12 mx-auto px-2 py-2"  /> : null}
+            <div className="beer text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg">
                 <div className="px-6 py-4">
                     <div className="mb-2">
                         <p className="font-bold text-xl">{name}</p>
                         <p className="italic text-orange-600">{style ? style.name : null}</p>
-                        
+                        { labels ? <img src={labels.medium} alt={`${name} icon`} className="w-8/12 sm:w-6/12 mx-auto px-2 py-2"  /> : null}
                     </div>
                     <ul>
-                        <li><strong>abv: {abv}</strong></li>
+                        {abv ? <li><strong>abv: {abv}</strong></li> : null}
                         {servingTemperature ? <li className="text-blue-500"><strong>best served: {servingTemperature}</strong></li> : null}
                     </ul>
                     {description ? <p className="text-md-3">{description}</p> : null}

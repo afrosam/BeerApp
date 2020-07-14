@@ -1,5 +1,20 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
+.beer-grid-row {
+  grid-auto-rows: 100px;
+}
+
+.beer {
+  max-height: 150px;
+  transition: all 0.3s;
+}
+
+.beer:hover {
+  z-index: 100;
+  max-height: auto;
+  transform: scale(1.2, 1.5);
+}
+
 /* Document
    ========================================================================== */
 
