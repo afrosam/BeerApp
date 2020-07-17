@@ -16,7 +16,7 @@
   opacity: 1;
 }
 
-.beer:hover > .beer-index {
+.beer:hover .beer-index {
   z-index: 2;
 }
 
