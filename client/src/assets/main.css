@@ -1,12 +1,13 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 .beer-grid-row {
-  grid-auto-rows: 100px;
+  grid-auto-rows: 125px;
 }
 
 .beer {
-  max-height: 150px;
+  max-height: 125px;
   transition: z-index 1s, transform .5s;
+  overflow: hidden;
 }
 
 .beer:hover {
@@ -24,6 +25,10 @@
   max-height: 0;
   opacity: 0;
   transition: opacity .7s;
+}
+
+.beer-summary {
+  max-height: inherit;
 }
 
 /* Document
