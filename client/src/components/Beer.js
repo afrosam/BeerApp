@@ -5,7 +5,7 @@ export const Beer = (props) => {
 
     return (
         <div className="beer transition shadow duration-300 ease-in-out transform hover:shadow-lg">
-            <div className="beer-index text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg px-6 py-4">
+            <div className="text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg px-6 py-4">
                 <div className="mb-2">
                     <p className="font-bold text-xl">{name}</p>
                     <p className="italic text-orange-600">{style ? style.name : null}</p>

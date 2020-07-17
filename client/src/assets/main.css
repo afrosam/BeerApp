@@ -6,23 +6,16 @@
 
 .beer {
   max-height: 150px;
+  transition: z-index .7s;
 }
 
 .beer:hover {
   max-height: fit-content;
+  z-index: 2;
 }
 
 .beer:hover .beer-op {
   opacity: 1;
-}
-
-.beer:hover .beer-index {
-  z-index: 2;
-}
-
-.beer-index {
-  z-index: 1;
-  transition: z-index .7s;
 }
 
 .beer-op {
