@@ -6,22 +6,24 @@
 
 .beer {
   max-height: 150px;
-  transition: z-index .7s;
+  transition: z-index 1s, transform .5s;
 }
 
 .beer:hover {
   max-height: fit-content;
   z-index: 2;
+  transform: scale(1.05);
 }
 
 .beer:hover .beer-op {
   opacity: 1;
+  max-height: fit-content;
 }
 
 .beer-op {
-  height: fit-content;
+  max-height: 0;
   opacity: 0;
-  transition: opacity .5s;
+  transition: opacity .7s;
 }
 
 /* Document
