@@ -6,7 +6,7 @@
 
 .beer {
   max-height: 150px;
-  transition: z-index 1s;
+  transition: z-index .7s;
 }
 
 .beer:hover {
@@ -21,7 +21,7 @@
 .beer-op {
   height: inherit;
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity .5s;
 }
 
 /* Document
