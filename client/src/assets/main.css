@@ -2,6 +2,7 @@
 
 .beer-grid-row {
   grid-auto-rows: 125px;
+  margin-bottom: 450px;
 }
 
 .beer {
@@ -21,7 +22,7 @@
 }
 
 .beer-summary {
-  transition: max-height .5s linear;
+  transition: max-height 1.25s ease-in;
 }
 
 .beer:hover .beer-summary {
@@ -37,11 +38,6 @@
 .beer-summary {
   min-height: 125px;
   max-height: 125px;
-}
-
-.btm-mg {
-  margin-bottom: 200px;
-  overflow: hidden;
 }
 
 /* Document
