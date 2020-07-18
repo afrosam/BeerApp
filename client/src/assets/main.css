@@ -22,7 +22,7 @@
 }
 
 .beer-summary {
-  transition: max-height 1.25s ease-in;
+  transition: max-height .75s ease-in;
 }
 
 .beer:hover .beer-summary {
@@ -32,7 +32,7 @@
 .beer-op {
   max-height: 0;
   opacity: 0;
-  transition: opacity .5s linear;
+  transition: opacity .5s ease-in;
 }
 
 .beer-summary {
