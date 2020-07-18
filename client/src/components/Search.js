@@ -1,19 +1,15 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import {GlobalContext} from '../context/GlobalState';
 
 import axios from 'axios';
 
-export const Search = (props) => {
+export const Search = () => {
     const { getBeers } = useContext(GlobalContext);
 
     const handleClick = () => {
-      useEffect(() => {
           let submit = document.getElementsByClassName('submit')[0];
           submit.classList.add('handleClick');
-        return () => {
           submit.classList.remove('handleClick');
-        }
-      }, [])
     }
 
     const handleSubmit = (e) => {
