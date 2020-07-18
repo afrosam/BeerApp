@@ -4,10 +4,12 @@ export const Beer = (props) => {
     const {abv, name, description, servingTemperature, available, style, labels} = props.beer;
 
     useEffect(() => {
-        document.body.classList.add('animateUp');
+        let matches = document.getElementsByClassName('beer');
+        let beers = Array.from(matches);
+        beers.map((ele) => ele.classList.add('animateUp'))
 
         return function cleanup() {
-            document.body.classList.remove('animateUp');
+            beers.map((ele) => ele.classList.remove('animateUp'));
         };
     }, []);
 
