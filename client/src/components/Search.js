@@ -3,7 +3,7 @@ import {GlobalContext} from '../context/GlobalState';
 
 import axios from 'axios';
 
-export const Search = () => {
+export const Search = (props) => {
     const { getBeers } = useContext(GlobalContext);
 
     const handleClick = () => {
