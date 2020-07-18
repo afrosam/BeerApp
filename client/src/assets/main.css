@@ -12,6 +12,7 @@
 .beer:hover {
   max-height: fit-content;
   z-index: 2;
+  overflow: auto;
 }
 
 .beer:hover .beer-op {
@@ -19,14 +20,18 @@
   max-height: fit-content;
 }
 
+.beer-summary {
+  transition: max-height 1s linear;
+}
+
 .beer:hover .beer-summary {
-  max-height: 125px;
+  max-height: 1000px;
 }
 
 .beer-op {
   max-height: 0;
   opacity: 0;
-  transition: opacity .6s linear, max-height 1s linear;
+  transition: opacity .6s linear;
 }
 
 .beer-summary {
