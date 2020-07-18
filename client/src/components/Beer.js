@@ -1,7 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 export const Beer = (props) => {
     const {abv, name, description, servingTemperature, available, style, labels} = props.beer;
+
+    useEffect(() => {
+        document.body.classList.add('animateUp');
+
+        return function cleanup() {
+            document.body.classList.remove('animateUp');
+        };
+    }, []);
 
     return (
         <div className="beer transition shadow duration-300 ease-in-out transform hover:shadow-lg">
