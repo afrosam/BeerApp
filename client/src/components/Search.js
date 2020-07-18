@@ -9,6 +9,7 @@ export const Search = () => {
     const handleClick = () => {
           let submit = document.getElementsByClassName('submit')[0];
           submit.classList.add('handleClick');
+          setTimeout(250);
           submit.classList.remove('handleClick');
     }
 
