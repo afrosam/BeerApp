@@ -6,39 +6,35 @@
 
 .beer {
   max-height: 125px;
-  height: auto;
   overflow: hidden;
-  transition: height 1s, max-height 1s;
 }
 
 .beer:hover {
   max-height: fit-content;
-  height: fit-content;
   z-index: 2;
 }
 
 .beer:hover .beer-op {
   opacity: 1;
-  height: fit-content;
+  max-height: fit-content;
 }
 
 .beer:hover .beer-summary {
-  max-height: auto;
+  max-height: 125px;
 }
 
 .beer-op {
-  height: 0;
+  max-height: 0;
   opacity: 0;
-  transition: opacity .6s;
+  transition: opacity .6s linear, max-height 1s linear;
 }
 
 .beer-summary {
   min-height: 125px;
-  max-height: inherit;
-  transition: max-height 1.5s;
+  max-height: 125px;
 }
 
-.container {
+.btm-mg {
   margin-bottom: 200px;
 }
 
