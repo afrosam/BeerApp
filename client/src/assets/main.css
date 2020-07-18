@@ -17,7 +17,7 @@
 
 .beer:hover .beer-op {
   opacity: 1;
-  max-height: fit-content;
+  max-height: 1000px;
 }
 
 .beer-summary {
@@ -25,7 +25,7 @@
 }
 
 .beer:hover .beer-summary {
-  max-height: 1000px;
+  max-height: 1050px;
 }
 
 .beer-op {
