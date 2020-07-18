@@ -5,30 +5,34 @@
 }
 
 .beer {
-  max-height: 125px;
-  transition: max-height 1.5s, z-index 1s, transform .5s;
+  height: 125px;
+  transition: height 1s, z-index .6s;
+  overflow: hidden;
 }
 
 .beer:hover {
-  max-height: fit-content;
+  height: auto;
   z-index: 2;
-  transform: scale(1.05);
 }
 
 .beer:hover .beer-op {
   opacity: 1;
-  max-height: fit-content;
+  height: auto;
 }
 
 .beer-op {
-  max-height: 0;
+  height: 0;
   opacity: 0;
-  transition: opacity .7s;
+  transition: opacity .6s;
 }
 
 .beer-summary {
   min-height: 125px;
   max-height: inherit;
+}
+
+.container {
+  margin-bottom: 200px;
 }
 
 /* Document
