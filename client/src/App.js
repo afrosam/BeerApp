@@ -8,7 +8,7 @@ import {GlobalProvider} from './context/GlobalState';
 
 function App() {
   return (
-    <div className="App bg-gray-100 flex h-auto min-h-screen w-full justify-center">
+    <div className="App bg-gray-100 flex h-auto min-h-screen w-full justify-end">
       <GlobalProvider>
         <div className="container flex flex-col content-center justify-center mx-auto text-yellow-600">
           <Search />

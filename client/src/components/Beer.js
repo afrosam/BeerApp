@@ -6,7 +6,6 @@ export const Beer = (props) => {
     useEffect(() => {
         let matches = document.getElementsByClassName('beer');
         let beers = Array.from(matches);
-        beers.map((ele) => ele.classList.add('animateUp'))
 
         return function cleanup() {
             beers.map((ele) => ele.classList.remove('animateUp'));
@@ -14,7 +13,7 @@ export const Beer = (props) => {
     }, []);
 
     return (
-        <div className="beer transition shadow duration-300 ease-in-out transform hover:shadow-lg">
+        <div className="animateUp beer transition shadow duration-300 ease-in-out transform hover:shadow-lg">
             <div className="beer-summary text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg px-6 py-4">
                 <div className="mb-2">
                     <p className="font-bold text-xl">{name}</p>
