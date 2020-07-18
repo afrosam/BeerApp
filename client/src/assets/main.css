@@ -12,7 +12,7 @@
 .beer:hover {
   max-height: fit-content;
   z-index: 2;
-  overflow: auto;
+  overflow: visible;
 }
 
 .beer:hover .beer-op {
