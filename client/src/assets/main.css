@@ -21,7 +21,7 @@
 }
 
 .beer-summary {
-  transition: max-height 1s linear;
+  transition: max-height .5s linear;
 }
 
 .beer:hover .beer-summary {
@@ -31,7 +31,7 @@
 .beer-op {
   max-height: 0;
   opacity: 0;
-  transition: opacity .6s linear;
+  transition: opacity .5s linear;
 }
 
 .beer-summary {
@@ -41,6 +41,7 @@
 
 .btm-mg {
   margin-bottom: 200px;
+  overflow: hidden;
 }
 
 /* Document
