@@ -63,6 +63,11 @@
   max-height: 125px;
 }
 
+.submit {
+  border-right: 4px solid #744210;
+  border-bottom: 4px solid #744210
+}
+
 /* Document
    ========================================================================== */
 
