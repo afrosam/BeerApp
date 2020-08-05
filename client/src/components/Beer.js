@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 
 export const Beer = (props) => {
     const {abv, name, description, servingTemperature, available, style, labels} = props.beer;
-    const [show, setShow] = false
+    const [show, setShow] = useState(false);
 
     useEffect(() => {
         let matches = document.getElementsByClassName('beer');
