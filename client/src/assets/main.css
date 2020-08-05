@@ -21,11 +21,30 @@
   overflow: hidden;
 }
 
+.beer:before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 4px;
+  right: 5%;
+  background: #744210;
+  bottom: 15%;
+  transform: rotate(-90deg);
+  transition: transform .85s ease-in-out;
+}
+
 /* rename to show beer for component onclick handler to change classname */
 .show-beer {
   max-height: fit-content;
   z-index: 2;
   overflow: visible;
+}
+
+.show-beer:before {
+  transform: rotate(0deg);
+}
+.show-beer:after {
+  opacity: 0;
 }
 
 .show-beer .beer-op {
@@ -34,28 +53,29 @@
 }
 
 .beer-summary {
-  transition: max-height .75s ease-in;
+  transition: max-height .5s ease-in-out;
 }
 
 .show-beer .beer-summary {
   max-height: 1050px;
 }
 
-.beer-btn:before {
+.beer-btn:after {
   position: absolute;
-  content: "+";
-  width: 1em;
-  height: 1em;
-  font-size: 2rem;
-  right: 10%;
-  bottom: 25%;
-  border-radius: 50%;
+  content: "";
+  width: 16px;
+  height: 4px;
+  right: 5%;
+  background: #744210;
+  bottom: 15%;
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
 }
 
 .beer-op {
   max-height: 0;
   opacity: 0;
-  transition: opacity .5s ease-in;
+  transition: opacity .75s ease-in-out;
 }
 
 .beer-summary {
