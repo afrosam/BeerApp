@@ -41,6 +41,18 @@
   max-height: 1050px;
 }
 
+.beer-btn:before {
+  position: absolute;
+  content: "+";
+  width: 1em;
+  height: 1em;
+  right: 10%;
+  bottom: 10%;
+  border-radius: 50%;
+  background: #744210;
+  color: white;
+}
+
 .beer-op {
   max-height: 0;
   opacity: 0;

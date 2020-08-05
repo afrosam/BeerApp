@@ -14,7 +14,7 @@ export const Beer = (props) => {
     }, []);
 
     return (
-        <div onClick={() => setShow(!show)} className={`animateUp beer transition shadow duration-300 ease-in-out transform hover:shadow-lg ${show ? "show-beer" : ""}`}>
+        <div onClick={() => setShow(!show)} className={`animateUp beer transition shadow duration-300 ease-in-out transform hover:shadow-lg ${show ? "show-beer" : "beer-btn"}`}>
             <div className="beer-summary text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg px-6 py-4">
                 <div className="mb-2">
                     <p className="font-bold text-xl">{name}</p>
