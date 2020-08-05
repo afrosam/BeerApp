@@ -12,9 +12,9 @@ export const Beer = (props) => {
         };
     }, []);
 
-    const showMe = () => {
+    const showMe = (e) => {
         let matches = document.getElementsByClassName('show-beer');
-        matches.length > 0 ? matches[0].classList.remove('show-beer') : this.classlist.add('show-beer')
+        matches.length > 0 ? matches[0].classList.remove('show-beer') : e.target.classlist.add('show-beer')
     }
 
     return (
