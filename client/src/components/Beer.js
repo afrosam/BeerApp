@@ -14,7 +14,9 @@ export const Beer = (props) => {
 
     const showMe = (e) => {
         let matches = document.getElementsByClassName('show-beer');
-        matches.length > 0 ? matches[0].classList.remove('show-beer') : e.target.classlist.add('show-beer')
+        console.log(e.target);
+        console.log(this);
+        //matches.length > 0 ? matches[0].classList.remove('show-beer') : e.target.classlist.add('show-beer')
     }
 
     return (
