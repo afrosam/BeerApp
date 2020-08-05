@@ -46,11 +46,10 @@
   content: "+";
   width: 1em;
   height: 1em;
+  font-size: 2rem;
   right: 10%;
-  bottom: 10%;
+  bottom: 25%;
   border-radius: 50%;
-  background: #744210;
-  color: white;
 }
 
 .beer-op {
