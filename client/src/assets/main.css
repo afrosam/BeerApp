@@ -29,8 +29,8 @@
   right: 5%;
   background: #744210;
   bottom: 15%;
-  transform: rotate(-90deg);
-  transition: transform .85s ease-in-out;
+  transform: rotate(90deg);
+  transition: transform .5s ease-in-out;
 }
 
 /* rename to show beer for component onclick handler to change classname */
