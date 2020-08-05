@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 
 export const Beer = (props) => {
     const {abv, name, description, servingTemperature, available, style, labels} = props.beer;
+    const [show, setShow] = false
 
     useEffect(() => {
         let matches = document.getElementsByClassName('beer');
@@ -12,16 +13,9 @@ export const Beer = (props) => {
         };
     }, []);
 
-    const showMe = (e) => {
-        let matches = document.getElementsByClassName('show-beer');
-        console.log(e);
-        console.log(this);
-        //matches.length > 0 ? matches[0].classList.remove('show-beer') : e.target.classlist.add('show-beer')
-    }
-
     return (
-        <div className="animateUp beer transition shadow duration-300 ease-in-out transform hover:shadow-lg">
-            <div onClick={showMe} className="beer-summary text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg px-6 py-4">
+        <div onClick={() => setShow(!show)} className={`animateUp beer transition shadow duration-300 ease-in-out transform hover:shadow-lg ${show ? "show-beer" : ""}`}>
+            <div className="beer-summary text-gray-800 border-4 border-orange-900 bg-yellow-300 rounded overflow-hidden shadow-lg px-6 py-4">
                 <div className="mb-2">
                     <p className="font-bold text-xl">{name}</p>
                     <p className="italic text-orange-600">{style ? style.name : null}</p>
