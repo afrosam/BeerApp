@@ -5,11 +5,6 @@
   to {opacity: 1}
 }
 
-@keyframes btnClick {
-  from {border-right: 4px solid #744210; border-bottom: 4px solid #744210}
-  to {border-right: none; border-bottom: none}
-}
-
 .animateUp {
   animation-name: fadeUp;
   animation-duration: 1s;
@@ -26,13 +21,14 @@
   overflow: hidden;
 }
 
-.beer:hover {
+/* rename to show beer for component onclick handler to change classname */
+.show-beer {
   max-height: fit-content;
   z-index: 2;
   overflow: visible;
 }
 
-.beer:hover .beer-op {
+.show-beer .beer-op {
   opacity: 1;
   max-height: 1000px;
 }
@@ -41,7 +37,7 @@
   transition: max-height .75s ease-in;
 }
 
-.beer:hover .beer-summary {
+.show-beer .beer-summary {
   max-height: 1050px;
 }
 
@@ -58,14 +54,12 @@
 
 .submit {
   border-right: 4px solid #744210;
-  border-bottom: 4px solid #744210
+  border-bottom: 4px solid #744210;
+  transition: border 0.4s;
 }
 
 .submit:active {
-  animation-name: btnClick;
-  animation-duration: .2s;
-  animation-timing-function: linear;
-  animation-direction: alternate;
+  border: none;
 }
 
 /* Document
