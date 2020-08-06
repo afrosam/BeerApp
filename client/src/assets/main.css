@@ -30,12 +30,13 @@
   background: #744210;
   bottom: 15%;
   transform: rotate(90deg);
-  transition: transform .5s ease-in-out;
+  transition: transform .15s ease-in-out;
 }
 
 /* rename to show beer for component onclick handler to change classname */
 .show-beer {
   max-height: fit-content;
+  height: fit-content;
   z-index: 2;
   overflow: visible;
 }
@@ -53,7 +54,7 @@
 }
 
 .beer-summary {
-  transition: max-height .5s ease-in-out;
+  transition: max-height .5s linear;
 }
 
 .show-beer .beer-summary {
@@ -69,13 +70,13 @@
   background: #744210;
   bottom: 15%;
   opacity: 1;
-  transition: opacity .2s ease-in-out;
+  transition: opacity .05s ease-in-out;
 }
 
 .beer-op {
   max-height: 0;
   opacity: 0;
-  transition: opacity .75s ease-in-out;
+  transition: opacity .75s linear;
 }
 
 .beer-summary {
