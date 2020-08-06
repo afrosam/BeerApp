@@ -26,9 +26,9 @@
   content: "";
   width: 16px;
   height: 4px;
-  right: 5%;
+  right: 1em;
   background: #744210;
-  bottom: 15%;
+  top: 1em;
   transform: rotate(90deg);
   transition: transform .15s ease-in-out;
 }
@@ -66,9 +66,9 @@
   content: "";
   width: 16px;
   height: 4px;
-  right: 5%;
+  right: 1em;
   background: #744210;
-  bottom: 15%;
+  top: 1em;
   opacity: 1;
   transition: opacity .05s ease-in-out;
 }
